@@ -1,0 +1,484 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Colors */
+  --color-deep-iris: #16165c;
+  --color-iris-shadow: #232269;
+  --color-iris-glow: #403cd5;
+  --color-iris-pulse: #5350cc;
+  --color-iris-border: #4846c6;
+  --color-iris-veil: #524fe1;
+  --color-lilac-mist: #b1a6f6;
+  --color-clinical-cyan: #00b1ff;
+  --color-cyan-soft: #59b4ff;
+  --color-mint-vital: #00ffaa;
+  --color-teal-signal: #2ee9ff;
+  --color-cloud-white: #ffffff;
+  --color-pearl: #f4f4f6;
+  --color-ash: #d8d8e3;
+  --color-fog: #9494a9;
+
+  /* Typography — Font Families */
+  --font-gilroy: 'Gilroy', 'Plus Jakarta Sans', 'Manrope', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  /* Typography — Scale */
+  --text-caption: 12px;
+  --leading-caption: 1.44;
+  --tracking-caption: 0.24px;
+  --text-body-sm: 14px;
+  --leading-body-sm: 1.44;
+  --tracking-body-sm: 0.28px;
+  --text-subheading: 18px;
+  --leading-subheading: 1.44;
+  --tracking-subheading: -0.54px;
+  --text-heading-sm: 24px;
+  --leading-heading-sm: 1.44;
+  --tracking-heading-sm: -0.72px;
+  --text-heading: 46px;
+  --leading-heading: 1;
+  --tracking-heading: -1.84px;
+  --text-heading-lg: 54px;
+  --leading-heading-lg: 1;
+  --tracking-heading-lg: -2.16px;
+  --text-heading-xl: 66px;
+  --leading-heading-xl: 1;
+  --tracking-heading-xl: -2.64px;
+  --text-display: 92px;
+  --leading-display: 0.92;
+  --tracking-display: -6.9px;
+  --text-display-xl: 124px;
+  --leading-display-xl: 0.92;
+  --tracking-display-xl: -9.3px;
+
+  /* Typography — Weights (Only 500 & 600) */
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+
+  /* Spacing */
+  --spacing-unit: 4px;
+  --spacing-8: 8px;
+  --spacing-12: 12px;
+  --spacing-16: 16px;
+  --spacing-20: 20px;
+  --spacing-24: 24px;
+  --spacing-32: 32px;
+  --spacing-36: 36px;
+  --spacing-40: 40px;
+  --spacing-48: 48px;
+  --spacing-116: 116px;
+  --spacing-220: 220px;
+
+  /* Layout */
+  --page-max-width: 1200px;
+  --section-gap: 80px;
+  --card-padding: 24px;
+  --element-gap: 8px;
+
+  /* Border Radius */
+  --radius-md: 6.9984px;
+  --radius-2xl: 15.9984px;
+  --radius-3xl: 24.0048px;
+  --radius-3xl-2: 31.9968px;
+  --radius-full: 9999px;
+
+  --radius-tags: 9999px;
+  --radius-cards: 24px;
+  --radius-icons: 7px;
+  --radius-inputs: 16px;
+  --radius-buttons: 9999px;
+  --radius-cards-elevated: 32px;
+
+  /* Surfaces */
+  --surface-deep-iris-canvas: #16165c;
+  --surface-iris-shadow: #232269;
+  --surface-iris-glow: #403cd5;
+  --surface-pearl-inversion: #f4f4f6;
+  --surface-cloud-white: #ffffff;
+}
+
+/* ─── Global Reset & Base ─── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--color-deep-iris);
+}
+
+body {
+  font-family: var(--font-gilroy);
+  font-weight: 500;
+  color: var(--color-cloud-white);
+  background-color: var(--color-deep-iris);
+  line-height: 1.44;
+  letter-spacing: -0.015em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Gilroy speaks only in weights 500 & 600 */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-gilroy);
+  font-weight: 600;
+}
+
+/* ─── Scroll animations ─── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-5 { transition-delay: 0.5s; }
+.reveal-delay-6 { transition-delay: 0.6s; }
+
+/* ─── Custom scrollbar ─── */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-deep-iris);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-iris-border);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-iris-pulse);
+}
+
+/* ─── Buttons ─── */
+.btn-primary {
+  background-color: var(--color-iris-pulse);
+  color: var(--color-cloud-white);
+  font-family: var(--font-gilroy);
+  font-weight: 500;
+  padding: 14px 26px;
+  border-radius: 9999px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  box-shadow: 0 0 20px rgba(60, 57, 185, 0.45);
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 1.44;
+}
+
+.btn-primary:hover {
+  background-color: #6360dc;
+  transform: translateY(-2px);
+  box-shadow: 0 0 28px rgba(83, 80, 204, 0.7);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-ghost, .btn-outline {
+  background-color: transparent;
+  color: var(--color-cloud-white);
+  font-family: var(--font-gilroy);
+  font-weight: 500;
+  padding: 13px 25px;
+  border-radius: 9999px;
+  border: 1px solid var(--color-iris-border);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 1.44;
+}
+
+.btn-ghost:hover, .btn-outline:hover {
+  background-color: rgba(64, 60, 213, 0.15);
+  border-color: var(--color-clinical-cyan);
+  color: var(--color-clinical-cyan);
+  box-shadow: 0 0 16px rgba(0, 177, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+.btn-light {
+  background-color: var(--color-iris-shadow);
+  color: var(--color-cloud-white);
+  font-family: var(--font-gilroy);
+  font-weight: 500;
+  padding: 14px 26px;
+  border-radius: 9999px;
+  border: 1px solid var(--color-iris-border);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-light:hover {
+  background-color: var(--color-iris-pulse);
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(60, 57, 185, 0.5);
+}
+
+/* ─── Word Highlight Box (Design System Signature) ─── */
+.word-highlight {
+  display: inline-block;
+  padding: 1px 8px;
+  border: 1px dashed var(--color-clinical-cyan);
+  border-radius: 7px;
+  color: var(--color-clinical-cyan);
+  transition: border-color 0.3s ease;
+}
+
+.word-highlight-lilac {
+  display: inline-block;
+  padding: 1px 8px;
+  border: 1px dashed var(--color-lilac-mist);
+  border-radius: 7px;
+  color: var(--color-lilac-mist);
+}
+
+/* ─── Card Design System & Effects ─── */
+.dark-card {
+  position: relative;
+  background-color: var(--color-iris-shadow);
+  border: 1px solid var(--color-iris-border);
+  border-radius: 24px;
+  padding: 24px;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.35s ease;
+  overflow: hidden;
+}
+
+/* Subtle top edge gradient reflection */
+.dark-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(177, 166, 246, 0.35), transparent);
+  opacity: 0.6;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.dark-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-iris-veil);
+  box-shadow: 0 16px 40px -10px rgba(10, 10, 48, 0.8),
+              0 0 24px rgba(64, 60, 213, 0.35);
+}
+
+.dark-card:hover::before {
+  opacity: 1;
+}
+
+/* Card with Cyan Interactive Accent */
+.dark-card-cyan-hover {
+  position: relative;
+  background-color: var(--color-iris-shadow);
+  border: 1px solid var(--color-iris-border);
+  border-radius: 24px;
+  padding: 24px;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.35s ease;
+  overflow: hidden;
+}
+
+.dark-card-cyan-hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0, 177, 255, 0.5), transparent);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.dark-card-cyan-hover:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0, 177, 255, 0.6);
+  box-shadow: 0 16px 40px -10px rgba(10, 10, 48, 0.8),
+              0 0 24px rgba(0, 177, 255, 0.22);
+}
+
+.dark-card-cyan-hover:hover::before {
+  opacity: 1;
+}
+
+/* Metric / Glow Card */
+.metric-card {
+  position: relative;
+  background: linear-gradient(135deg, rgba(64, 60, 213, 0.35), rgba(35, 34, 105, 0.8));
+  border: 1px solid var(--color-iris-border);
+  border-radius: 24px;
+  padding: 24px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.metric-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-iris-veil);
+  box-shadow: 0 12px 32px rgba(64, 60, 213, 0.3);
+}
+
+/* Light Inversion Section Cards */
+.light-card {
+  background-color: #ffffff;
+  border: 1px solid var(--color-ash);
+  border-radius: 24px;
+  padding: 24px;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.light-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-iris-glow);
+  box-shadow: 0 16px 36px rgba(22, 22, 92, 0.12);
+}
+
+/* ─── Tags & Badges ─── */
+.tag-vital {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-size: 13px;
+  font-weight: 500;
+  background-color: rgba(0, 255, 170, 0.08);
+  border: 1px solid rgba(0, 255, 170, 0.4);
+  color: var(--color-mint-vital);
+}
+
+.tag-cyan {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-size: 13px;
+  font-weight: 500;
+  background-color: rgba(0, 177, 255, 0.1);
+  border: 1px solid rgba(0, 177, 255, 0.4);
+  color: var(--color-clinical-cyan);
+}
+
+.tag-violet {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-size: 13px;
+  font-weight: 500;
+  background-color: rgba(177, 166, 246, 0.12);
+  border: 1px solid var(--color-iris-border);
+  color: var(--color-lilac-mist);
+}
+
+/* ─── Icon container ─── */
+.icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 7px;
+  background-color: rgba(64, 60, 213, 0.25);
+  border: 1px solid var(--color-iris-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-lilac-mist);
+  transition: all 0.3s ease;
+}
+
+.dark-card:hover .icon-box,
+.dark-card-cyan-hover:hover .icon-box {
+  background-color: rgba(0, 177, 255, 0.15);
+  border-color: var(--color-clinical-cyan);
+  color: var(--color-clinical-cyan);
+  transform: scale(1.05);
+}
+
+/* ─── Floating WhatsApp Button ─── */
+.whatsapp-float {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 999;
+  width: 58px;
+  height: 58px;
+  background: #25D366;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.45), 0 0 16px rgba(0, 255, 170, 0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.08) translateY(-2px);
+  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.65), 0 0 24px rgba(0, 255, 170, 0.5);
+}
+
+/* ─── FAQ Accordion ─── */
+.faq-accordion-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
+  opacity: 0;
+}
+
+.faq-accordion-content.open {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+/* ─── Line-art medical illustrations & Technical ambient grid ─── */
+.tech-grid-bg {
+  position: relative;
+}
+
+.tech-grid-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(72, 70, 198, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(72, 70, 198, 0.1) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 0;
+}
