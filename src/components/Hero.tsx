@@ -31,9 +31,8 @@ export default function Hero({ whatsappUrl }: HeroProps) {
           <div className="lg:col-span-7 text-cloud-white">
             {/* Pill Tag */}
             <div className="inline-flex items-center gap-2.5 bg-iris-shadow/90 border border-iris-border rounded-full px-4 py-1.5 mb-6 reveal shadow-sm">
-              <span className="w-2 h-2 rounded-full bg-mint-vital animate-pulse" />
               <span className="text-xs sm:text-sm font-medium text-pearl tracking-wide">
-                🐾 Atendimento Domiciliar em SP-Capital e Alto Tietê
+                🐾 - Atendimento Domiciliar em SP-Capital e Alto Tietê
               </span>
             </div>
 
@@ -81,15 +80,15 @@ export default function Hero({ whatsappUrl }: HeroProps) {
             {/* Trust Metric Blocks */}
             <div className="grid grid-cols-3 gap-3 sm:gap-4 mt-10 pt-8 border-t border-iris-border/60 reveal reveal-delay-4">
               <div className="bg-iris-shadow/60 border border-iris-border/80 rounded-2xl p-3 sm:p-4 text-center transition-all duration-300 hover:border-clinical-cyan/60 hover:bg-iris-shadow">
-                <div className="text-2xl sm:text-3xl font-semibold text-clinical-cyan tracking-tight">Esperiência</div>
+                <div className="text-1xl sm:text-3xl font-semibold text-clinical-cyan tracking-tight">Esperiência</div>
                 <div className="text-xs text-pearl/80 font-medium mt-1">comprovada</div>
               </div>
               <div className="bg-iris-shadow/60 border border-iris-border/80 rounded-2xl p-3 sm:p-4 text-center transition-all duration-300 hover:border-clinical-cyan/60 hover:bg-iris-shadow">
-                <div className="text-2xl sm:text-3xl font-semibold text-clinical-cyan tracking-tight">Formação</div>
+                <div className="text-1xl sm:text-3xl font-semibold text-clinical-cyan tracking-tight">Formação</div>
                 <div className="text-xs text-pearl/80 font-medium mt-1">FMVZ-USP</div>
               </div>
               <div className="bg-iris-shadow/60 border border-iris-border/80 rounded-2xl p-3 sm:p-4 text-center transition-all duration-300 hover:border-mint-vital/60 hover:bg-iris-shadow">
-                <div className="text-2xl sm:text-3xl font-semibold text-mint-vital tracking-tight">100%</div>
+                <div className="text-1xl sm:text-3xl font-semibold text-mint-vital tracking-tight">100%</div>
                 <div className="text-xs text-pearl/80 font-medium mt-1">domiciliar ou clínica</div>
               </div>
             </div>
@@ -103,7 +102,7 @@ export default function Hero({ whatsappUrl }: HeroProps) {
             {/* Main Image Container Card */}
             <div className="relative z-10 dark-card-cyan-hover p-3.5 bg-iris-shadow/90 border border-iris-border rounded-[32px] w-full max-w-sm sm:max-w-md">
               {/* Brand Logo Overlay Badge */}
-              <div className="absolute -top-5 -left-5 sm:top-2 sm:left-2 w-20 h-20 sm:w-24 sm:h-24 rounded-full border-iris-border bg-deep-iris p-1 shadow-2xl z-20 overflow-hidden transition-transform duration-300 hover:scale-105">
+              <div className="absolute top-2 left-2 sm:top-2 sm:left-2 w-20 h-20 sm:w-24 sm:h-24 rounded-full border-iris-border bg-deep-iris p-1 shadow-2xl z-20 overflow-hidden transition-transform duration-300 hover:scale-105">
                 <img
                   src="/logo_vet.png"
                   alt="Rodentia Vet Logo"
@@ -122,7 +121,7 @@ export default function Hero({ whatsappUrl }: HeroProps) {
               </div>
 
               {/* Floating Badge 1 (Atendimento Domiciliar) */}
-              <div className="absolute -left-4 sm:left-5 bottom-8 bg-iris-shadow/95 border border-iris-border rounded-2xl shadow-card-hover p-3 flex items-center gap-3 reveal backdrop-blur-md transition-all duration-300 hover:border-mint-vital">
+              <div className="absolute left-1 sm:left-5 bottom-8 bg-iris-shadow/95 border border-iris-border rounded-2xl shadow-card-hover p-3 flex items-center gap-3 reveal backdrop-blur-md transition-all duration-300 hover:border-mint-vital">
                 <div className="w-10 h-10 rounded-[7px] bg-iris-glow/40 border border-iris-border flex items-center justify-center text-lg">
                   🐾
                 </div>
@@ -133,7 +132,7 @@ export default function Hero({ whatsappUrl }: HeroProps) {
               </div>
 
               {/* Floating Badge 2 (Exóticos / Cães & Gatos) */}
-              <div className="absolute -right-4 sm:right-5 bottom-8 bg-iris-shadow/95 border border-iris-border rounded-2xl shadow-card-hover p-3 flex items-center gap-3 reveal reveal-delay-2 backdrop-blur-md transition-all duration-300 hover:border-clinical-cyan">
+              <div className="absolute right-1 sm:right-5 bottom-8 bg-iris-shadow/95 border border-iris-border rounded-2xl shadow-card-hover p-3 flex items-center gap-3 reveal reveal-delay-2 backdrop-blur-md transition-all duration-300 hover:border-clinical-cyan">
                 <div className="w-10 h-10 rounded-[7px] bg-clinical-cyan/15 border border-clinical-cyan/40 flex items-center justify-center text-lg text-clinical-cyan">
                   ✨
                 </div>
