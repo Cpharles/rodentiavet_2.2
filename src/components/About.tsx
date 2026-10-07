@@ -17,31 +17,38 @@ export default function About() {
             <div className="relative">
               <div className="w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-iris-border/80 shadow-2xl relative z-10 bg-iris-shadow group">
                 <img
-                  src="/images/team-img-10.webp"
-                  alt="M.V. Nícolas Braga — Médico Veterinário Rodentia Vet"
+                  src="/images/vet-dog (7).webp"
+                  alt="cuidado"
                   className="w-full h-full object-cover" /*object-top group-hover:scale-105 transition-transform duration-700*/
                 />
               </div>
 
               {/* Logo Overlay */}
-              <div className="absolute -bottom-3 -right-3 lg:right-2 w-40 h-40 rounded-full border-1 border-iris-border bg-deep-iris p-1 shadow-xl overflow-hidden z-20 transition-transform hover:scale-105" >
+              <div className="absolute -bottom-3 -right-3 lg:-right-16 w-40 h-40 rounded-full border-2 border-iris-border/80 shadow-2xl overflow-hidden z-10 bg-iris-shadow transition-transform hover:scale-105" >
                 <img src="/logo_vet.png" alt="Logo Rodentia Vet" className="w-full h-full object-cover rounded-full" />
               </div>
 
               {/* Small accent images (Preserved) */}
               <div className="hidden lg:block">
-                <div className="absolute top-4 -left-10 w-28 h-28 rounded-2xl overflow-hidden shadow-card-hover border border-iris-border bg-iris-shadow group z-20">
+                <div className="absolute top-4 -left-16 w-32 h-32 rounded-2xl overflow-hidden shadow-card-hover border border-iris-border bg-iris-shadow group z-20">
                   <img
-                    src="/images/wild-health4.webp"
-                    alt="Animal silvestre"
+                    src="/images/cat8.webp"
+                    alt="gato cortando unha"
                     className="w-full h-full object-cover" /*group-hover:scale-110 transition-transform duration-500"*/
                   />
                 </div>
-                <div className="absolute bottom-4 -left-10 w-28 h-28 rounded-2xl overflow-hidden shadow-card-hover border border-iris-border bg-iris-shadow group z-20">
+                <div className="absolute bottom-4 -left-16 w-32 h-32 rounded-2xl overflow-hidden shadow-card-hover border border-iris-border bg-iris-shadow group z-20">
                   <img
                     src="/images/squirrels.webp"
                     alt="Esquilo"
                     className="w-full h-full object-cover" /*group-hover:scale-110 transition-transform duration-500"*/
+                  />
+                </div>
+                <div className="absolute top-4 -right-16 w-32 h-32 rounded-2xl overflow-hidden shadow-card-hover border border-iris-border bg-iris-shadow group z-20">
+                  <img
+                    src="/images/farm-animal1.webp"
+                    alt="cabra"
+                    className="w-full h-full object-cover"
                   />
                 </div>
               </div>

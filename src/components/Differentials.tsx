@@ -1,7 +1,7 @@
 const differentials = [
   {
     icon: '🎓',
-    title: 'Formação Proficional',
+    title: 'Formação Profissional',
     description:
       'Médico Veterinário formado pela Faculdade de Medicina Veterinária e Zootecnia da USP — uma das mais renomadas do Brasil.',
   },
@@ -19,7 +19,7 @@ const differentials = [
   },
   {
     icon: '🤝',
-    title: 'Clínicas Parceiras em SP',
+    title: 'Clínicas Parceiras',
     description:
       'Parceria com clínicas veterinárias para atendimento em consultório quando necessário, em São Paulo capital e região do Alto Tietê.',
   },

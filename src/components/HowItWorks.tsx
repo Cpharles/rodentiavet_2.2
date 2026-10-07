@@ -29,7 +29,7 @@ const steps = [
     icon: '🔄',
     title: 'Acompanhamento',
     description:
-      'Retorno incluso por teleatendimento em até 30 dias. Suporte por WhatsApp no horário comercial para dúvidas e orientações entre as consultas.',
+      'Um retorno incluso por teleatendimento em até 30 dias. Suporte por WhatsApp no horário comercial para dúvidas e orientações entre as consultas.',
   },
 ]
 

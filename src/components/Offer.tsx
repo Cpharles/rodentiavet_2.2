@@ -19,13 +19,13 @@ const services = [
     icon: '🥗',
     title: 'Orientação Nutricional',
     description: 'Dietas personalizadas para cada espécie e fase de vida. Saúde começa na alimentação certa.',
-    image: '/images/service1.jpg',
+    image: '/images/service4.webp',
   },
   {
     icon: '✈️',
     title: 'Atestados para Viagens',
     description: 'Documentação veterinária para viagens nacionais e internacionais, com toda a burocracia resolvida.',
-    image: '/images/service3.jpg',
+    image: '/images/service3.webp',
   },
 ]
 
